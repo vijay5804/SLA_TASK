@@ -1,0 +1,45 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, .container
+{
+    min-height: 100vh;
+    background-color: aquamarine;
+}
+
+.container
+{
+    display: flex;
+}
+
+header
+{
+    flex: 1;
+    border-radius: 2em;
+    background-color: #8733fc;
+}
+
+section
+{
+    flex: 4;
+    border: 2px solid red;
+    border-radius: 2em;
+    display: flex;
+}q
+
+.col-left
+{
+    flex: 2;
+    background-color: #f93131;
+    border-radius: 2em;
+}
+
+.col-right
+{
+    flex: 1;
+    border-radius: 2em;
+}
