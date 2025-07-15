@@ -1,0 +1,43 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: Arial;
+}
+/* NavBar container */
+.navbar
+{
+    background-color: #333;
+    height: 800px;
+    width: 250px;
+}
+/* Horizontal Links */
+.nav-links
+{
+    list-style: none;
+}
+
+.nav-links li
+{
+    /* top & bottom margin 0 left & right 15px & gaps between items; */
+    margin: 0 15px;
+}
+
+.nav-links a
+{
+    display: block;
+    padding: 14px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover
+{
+    background-color: #f29e0f;
+}

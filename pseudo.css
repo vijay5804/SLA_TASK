@@ -1,0 +1,21 @@
+html
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1:after
+{
+    content: '';
+    background-color: red;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+h1
+{
+    position: relative;
+    width: max-content;
+}
