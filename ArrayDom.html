@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Display Array using DOM and Arrow Function</title>
+</head>
+<body>
+  <h2>Array Elements:</h2>
+  <ul id="list"></ul>
+
+  <script>
+    const fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+    // Arrow function to display array elements
+    const displayFruits = () => {
+      const listElement = document.getElementById("list");
+
+      fruits.forEach(fruit => {
+        listElement.innerHTML += `<li>${fruit}</li>`;
+      });
+    };
+
+    // Call the arrow function
+    displayFruits();
+  </script>
+</body>
+</html>

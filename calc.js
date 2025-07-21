@@ -1,6 +1,6 @@
 let num1 = 20;
 let num2 = 5;
-let operator = "+";  
+let operator = "-";  
 
 if (operator === "+") {
   console.log("Result: " + (num1 + num2));

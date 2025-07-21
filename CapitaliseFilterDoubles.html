@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Tasks: Filter & Map</title>
+</head>
+<body>
+  <h2>JavaScript Array Tasks</h2>
+
+  <p id="task1"></p>
+  <p id="task2"></p>
+  <p id="task3"></p>
+  <p id="task4"></p>
+
+  <script>
+    const users = [
+      { name: "Alice", age: 22 },
+      { name: "Bob", age: 28 },
+      { name: "Charlie", age: 30 }
+    ];
+
+    const products = [
+      { name: "Laptop", price: 900 },
+      { name: "Mouse", price: 25 },
+      { name: "Monitor", price: 300 }
+    ];
+
+    // 1️⃣ Filter users above age 25
+    const above25 = users.filter(user => user.age > 25);
+    document.getElementById("task1").innerHTML = 
+      "<b>Users above age 25:</b> " + 
+      above25.map(u => u.name + " (" + u.age + ")").join(", ");
+
+    // 2️⃣ Capitalize all names
+    const capitalized = users.map(user => user.name.toUpperCase());
+    document.getElementById("task2").innerHTML = 
+      "<b>Capitalized names:</b> " + capitalized.join(", ");
+
+    // 3️⃣ Filter products by price and return names (price > 100)
+    const expensiveNames = products
+      .filter(p => p.price > 100)
+      .map(p => p.name);
+    document.getElementById("task3").innerHTML = 
+      "<b>Products over ₹100:</b> " + expensiveNames.join(", ");
+
+    // 4️⃣ Double the ages and return names of those now over 50
+    const doubled = users.map(user => ({
+      name: user.name,
+      age: user.age * 2
+    }));
+    const over50 = doubled
+      .filter(user => user.age > 50)
+      .map(user => user.name);
+    document.getElementById("task4").innerHTML = 
+      "<b>Users with doubled age > 50:</b> " + over50.join(", ");
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>String Functions</title>
+</head>
+<body>
+  <h2>String Functions in JavaScript</h2>
+  <p id="original"></p>
+  <p id="uppercase"></p>
+  <p id="lowercase"></p>
+  <p id="substring"></p>
+  <p id="replaced"></p>
+  <p id="splitted"></p>
+
+  <script>
+    const text = "Hello JavaScript World";
+
+    document.getElementById("original").innerHTML = "<b>Original:</b> " + text;
+
+    // 1. toUpperCase()
+    document.getElementById("uppercase").innerHTML = "<b>Uppercase:</b> " + text.toUpperCase();
+
+    // 2. toLowerCase()
+    document.getElementById("lowercase").innerHTML = "<b>Lowercase:</b> " + text.toLowerCase();
+
+    // 3. substring(start, end)
+    document.getElementById("substring").innerHTML = "<b>Substring (6, 16):</b> " + text.substring(6, 16);
+
+    // 4. replace(old, new)
+    document.getElementById("replaced").innerHTML = "<b>Replace 'JavaScript' with 'JS':</b> " + text.replace("JavaScript", "JS");
+
+    // 5. split(separator)
+    const words = text.split(" ");
+    document.getElementById("splitted").innerHTML = "<b>Split by space:</b> " + words.join(" | ");
+  </script>
+</body>
+</html>
