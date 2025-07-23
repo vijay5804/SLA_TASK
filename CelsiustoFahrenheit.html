@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Celsius to Fahrenheit</title>
+</head>
+<body>
+  <h2>Convert Celsius to Fahrenheit</h2>
+  <p>Enter temperature in Celsius:</p>
+  <input type="number" id="celsiusInput" />
+  <button onclick="convertTemperature()">Convert</button>
+  <p id="result"></p>
+
+  <script>
+    function convertTemperature() {
+      const celsius = document.getElementById("celsiusInput").value;
+      const result = document.getElementById("result");
+
+      if (celsius === "") {
+        result.textContent = "Please enter a temperature.";
+      } else {
+        const fahrenheit = (celsius * 9/5) + 32;
+        result.textContent = celsius + "°C = " + fahrenheit.toFixed(2) + "°F";
+      }
+    }
+  </script>
+</body>
+</html>

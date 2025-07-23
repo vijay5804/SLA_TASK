@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greatest of Three Numbers</title>
+</head>
+<body>
+  <h2>Greatest of Three Numbers</h2>
+  <input id="a" type="number" placeholder="Number 1"><br><br>
+  <input id="b" type="number" placeholder="Number 2"><br><br>
+  <input id="c" type="number" placeholder="Number 3"><br><br>
+  <button onclick="findGreatest()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    function findGreatest() {
+      let a = Number(document.getElementById("a").value);
+      let b = Number(document.getElementById("b").value);
+      let c = Number(document.getElementById("c").value);
+
+      let greatest = (a > b && a > c) ? a : (b > c ? b : c);
+      document.getElementById("result").innerText = "Greatest is: " + greatest;
+    }
+  </script>
+</body>
+</html>
