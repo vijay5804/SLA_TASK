@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script task</title>
+    <script>
+        function multiply(){
+            let a=document.getElementById("divider").value;
+            let b=document.getElementById("multiply").value;
+            let c=a*b;
+            document.getElementById("demo").innerHTML=c;
+        }
+        function divideby(){
+            let a=document.getElementById("divider").value;
+            let b=document.getElementById("multiply").value;
+            let c=a/b;
+            document.getElementById("demo").innerHTML=c;
+        }
+    </script>
+</head>
+<body>
+    <label for="divider">1st Number:</label>
+    <input type="number" id="divider" name="divider"> <br><br>
+    <label for="multiply">2nd Number:</label>
+    <input type="number" id="multiply" name="multiply"><br><br>
+    <button type="button" onclick="multiply()">Multiply</button>
+    <button type="button" onclick="divideby()">Divide</button>
+    <p>The Result is:</p>
+    <p id="demo"></p>
+</body>
+</html>

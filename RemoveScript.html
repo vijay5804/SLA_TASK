@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove 'script' at Index 4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef;
+            padding: 20px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Remove "script" from Index 4 (if present)</h2>
+
+    <input type="text" id="inputStr" placeholder="Enter a string">
+    <button onclick="removeScript()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        function removeScript() {
+            const str = document.getElementById("inputStr").value;
+            let modifiedStr = str;
+
+            if (str.substring(4, 10) === "script") {
+                modifiedStr = str.slice(0, 4) + str.slice(10);
+            }
+
+            document.getElementById("result").innerText = "Result: " + modifiedStr;
+        }
+    </script>
+
+</body>
+</html>
