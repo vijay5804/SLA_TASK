@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Simulation</title>
+</head>
+<body>
+  <h2>Simulated Payment Form</h2>
+  <form id="loginForm">
+    <label>Username: <input type="text" id="username" /></label><br><br>
+    <label>Password: <input type="password" id="password" /></label><br><br>
+    <button type="submit">Pay</button>
+  </form>
+  <div id="output"></div>
+
+  <script>
+    function fakePaymentAPI(amount) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(`payment of ${amount} success`);
+        }, 2000);
+      });
+    }
+
+
+    async function makePayment() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const output = document.getElementById("output");
+
+    
+      output.textContent = "";
+
+      if (username === "admin" && password === "1234") {
+        output.textContent = "processing payment...";
+        try {
+          const message = await fakePaymentAPI(500);
+          output.textContent = message;
+        } catch (err) {
+          output.textContent = "Payment failed!";
+        }
+      } else {
+        output.textContent = "Invalid credentials. Payment rejected.";
+      }
+    }
+
+    document.getElementById("loginForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      makePayment();
+    });
+  </script>
+</body>
+</html>
